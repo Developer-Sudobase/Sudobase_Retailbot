@@ -13,6 +13,8 @@ const AppContextProvider = ({ children }) => {
 
     const [isModelOpen, setIsModelOpen] = useState(false);
 
+    const [isWaiting, setIsWaiting] = useState(false);
+
     const { messages, setMessages, isPreviousMessagesLoaded } = useMessages();
 
     const { getLoginAttempts, incrementLoginAttempts, resetLoginAttempts } = useLoginAttempts();
@@ -132,6 +134,8 @@ const AppContextProvider = ({ children }) => {
                 voiceState,
                 setVoiceState,
                 signOutHandler,
+                isWaiting,
+                setIsWaiting,
             }}
         >
             {children}

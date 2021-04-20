@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
 const QueryBox = ({pushChat, username, botName, botAlias, sessionAttributes}) => {
     const classes = useStyles();
 
-    const { messages, setMessages, isPreviousMessagesLoaded, voiceState, setVoiceState } = useContext(AppContext)
+    const { messages, setMessages, isPreviousMessagesLoaded, voiceState, setVoiceState, setIsWaiting } = useContext(AppContext)
 
     const [message, setMessage] = useState("");
     

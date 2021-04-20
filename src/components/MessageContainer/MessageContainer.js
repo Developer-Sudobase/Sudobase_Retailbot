@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core';
+import { LinearProgress, makeStyles } from '@material-ui/core';
 import React, { useContext } from 'react';
 import { AppContext } from '../../AppContext';
 import Message from '../Message/Message';
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
 const MessageContainer = () => {
     const classes = useStyles();
-    const { messages } = useContext(AppContext);
+    const { messages, isWaiting } = useContext(AppContext);
     const isLast = (index) => {
         return index + 1 === messages.length ? true : false;
       };
