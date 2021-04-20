@@ -1,0 +1,91 @@
+{
+    "Products": [
+        {
+            "id": 1,
+            "Image": "https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+            "Title": "Shoes",
+            "Price": "₹123",
+            "Description": "asdhfgkgoeuwirnf",
+            "Rating": "2.5",
+            "Highlights": "None",
+            "Discount": "88%",
+            "Original Price": "₹300",
+            "Number of Ratings": "790",
+            "Number of Reviews": "106",
+            "Size": [6, 7, 8, 9],
+            "Button": [
+                "View Details"
+           ],
+           "Button1": [
+            "Visit Site"
+            ]
+        },
+        {  
+            "id": 2,
+            "Image": "http://sneakerfits.com/wp-content/uploads/2021/02/ua-project-rock-3-training-shoe-hi-vis-yellow-3.jpg",
+            "Title": "Shoes",
+            "Price": "₹123",
+            "Description": "asdhfgkgoeuwirnf",
+            "Rating": "2.5",
+            "Highlights": "None",
+            "Discount": "88%",
+            "Original Price": "₹300",
+            "Number of Ratings": "790",
+            "Number of Reviews": "106",
+            "Size": [6, 7, 8, 9],
+            "Button": [
+                "View Details"
+           ],
+           "Button1": [
+            "Visit Site"
+            ]
+        },
+        {
+            "id": 3,
+            "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDZRNqItce-JdL6nABAQAruIIgl8YjrzOkJnUp4r8mZCLrDxN5TpRsk1_tueWsZIrBdw8&usqp=CAU",
+            "Title": "Shoes",
+            "Price": "₹123",
+            "Description": "asdhfgkgoeuwirnf",
+            "Rating": "2.5",
+            "Highlights": "None",
+            "Discount": "88%",
+            "Original Price": "₹300",
+            "Number of Ratings": "790",
+            "Number of Reviews": "106",
+            "Size": [6, 7, 8, 9],
+            "Button": [
+                "View Details"
+           ],
+           "Button1": [
+            "Visit Site"
+            ]
+        },
+        {
+            "id": 4,
+            "Image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/eb1c2ded-ae08-494b-81ae-3aaa583f067d/air-max-pre-day-shoes-hlv9tD.png",
+            "Title": "Shoes",
+            "Price": "₹123",
+            "Description": "asdhfgkgoeuwirnf",
+            "Rating": "2.5",
+            "Highlights": "None",
+            "Discount": "88%",
+            "Original Price": "₹300",
+            "Number of Ratings": "790",
+            "Number of Reviews": "106",
+            "Size": [6, 7, 8, 9],
+            "Button": [
+                "View Details"
+           ],
+           "Button1": [
+            "Visit Site"
+            ]
+        }
+    ],
+    "Buttons": [
+        {
+            "Text1": "Show More",
+            "Text2": "Search Query",
+            "Text3": "End"
+        }
+    ]
+}

@@ -1,14 +1,30 @@
 {
   "name": "retailbot",
   "version": "0.1.0",
+  "homepage": ".",
   "private": true,
   "dependencies": {
+    "@chatscope/chat-ui-kit-react": "^1.5.2",
+    "@chatscope/chat-ui-kit-styles": "^1.2.0",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
+    "amazon-cognito-identity-js": "^4.6.0",
+    "aws-sdk": "^2.885.0",
+    "clsx": "^1.1.1",
+    "node-sass": "^5.0.0",
     "react": "^17.0.2",
+    "react-chat-widget": "^3.0.5",
     "react-dom": "^17.0.2",
+    "react-draggable": "^4.4.3",
+    "react-icons": "^4.2.0",
+    "react-idle-timer": "^4.6.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-slick": "^0.28.1",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
@@ -34,5 +50,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1"
   }
 }

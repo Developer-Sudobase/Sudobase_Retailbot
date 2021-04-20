@@ -1,0 +1,86 @@
+.mic-listening-container{
+    position: fixed;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    svg{
+      min-width: 5rem;
+      min-height: 5rem;
+      max-width: 5rem;
+      max-height: 5rem;
+      fill: url(#MyGradient);
+    }
+  }
+
+.mic-listening-helper{
+    background: rgb(54,69,71);
+    background: linear-gradient(305deg, rgb(54,69,71) 0%, rgb(255,226,104) 100%);
+    background-size: 400% 400%;
+    min-height: 150px;
+    min-width: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+
+    animation: gradient .3s ease infinite;
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  }
+
+.mic-listening{
+    height: 140px;
+    width: 140px;
+    padding: 1rem;
+    border-radius: 50%;
+    background: #131417;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.mic-listening-text{
+    color: white;
+  }
+
+.button{
+    background: gray;
+    margin: 0 0 0 .25rem;
+
+    &:hover{
+      background: white;
+
+      svg{
+        fill: gray;
+      }
+    }
+
+    &--inactive{
+      background: blue;
+
+      &:hover{
+        background: blue;
+      }
+    }
+
+    svg{
+      width: 1rem;
+      fill: white;
+    }
+  }
