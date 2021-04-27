@@ -5,8 +5,8 @@ import { IconButton, makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
     signout: {
         color: '#fff',
-        position: 'relative',
-        right: '10px',
+        position: 'absolute',
+        right: '60px',
         '&:focus': {
           outline: 'none !important'
         },

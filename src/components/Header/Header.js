@@ -136,7 +136,7 @@ const Header = () => {
                         src={process.env.PUBLIC_URL + '/images/sleekbuys_logo.png'}
                         alt="SleekBuys"
                     />
-                    <QueryBox pushChat={pushChat} username={username} botName={botName} botAlias={botAlias}/>
+                    {/* <QueryBox pushChat={pushChat} username={username} botName={botName} botAlias={botAlias}/> */}
                     <SignOutButton signOutHandler={() => {signOutHandler(); localStorage.removeItem("transcript");}}/>
                     <IconButton
                         color="inherit"

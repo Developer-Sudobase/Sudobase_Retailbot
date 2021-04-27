@@ -14,14 +14,18 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center'
     },
     querybox: {
+      //marginLeft: 'auto',
          width: `100%`,
+         backgroundColor: '#fff',
         //  paddingLeft: '40px',
-        [theme.breakpoints.down('xs')]: {
-            display: 'none',
-        },
+        //only remove this if require
+        // [theme.breakpoints.down('xs')]: {
+        //     display: 'none',
+        // },
       //   [theme.breakpoints.down('md')]: {
       //     display: 'none',
       // },
+      position: 'relative',
     },
     button: {
         position: 'relative',
@@ -31,17 +35,17 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     mic: {
-        position: 'relative',
-        right: 40,
+        //position: 'relative',
+        //right: 40,
         fontSize: 24,
-        color: '#fff',
+        color: '#333',
         '&:focus': {
           outline: 'none !important'
         },
     },
     michold: {
-      position: 'relative',
-      right: 40,
+      //position: 'relative',
+      //right: 40,
       fontSize: 24,
       color: 'red',
       '&:focus': {
@@ -49,12 +53,12 @@ const useStyles = makeStyles((theme) => ({
       },
     },
     input: {
-        width: '70%',
-        borderRadius: 24,
+        width: '100%',
+        //borderRadius: 24,
         backgroundColor: 'white',
         border: '1px solid transparent',
         fontSize: 20,
-        boxShadow: '0 2px 5px 1px rgb(64 60 67 / 16%)',
+        //boxShadow: '0 2px 5px 1px rgb(64 60 67 / 16%)',
         padding: '6px 0px 6px 14px',
         '&:focus': {
           borderColor: '#80bdff',
@@ -306,7 +310,7 @@ const QueryBox = ({pushChat, username, botName, botAlias, sessionAttributes}) =>
                 <input type="text" value={message} ref={textInputRef} className= {classes.input} onChange={(e) => {
             setMessage(e.target.value);
           }}/>
-                <IconButton className={classes.button} type="submit"><SendIcon/></IconButton>
+                {/* <IconButton className={classes.button} type="submit"><SendIcon/></IconButton> */}
                 {/* <IconButton className={classes.mic} ><MicNone fontSize="large"/></IconButton> */}
                 {speakButton}
                 {stopConversationButton}

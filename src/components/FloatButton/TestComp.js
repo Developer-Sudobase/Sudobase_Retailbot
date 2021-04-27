@@ -1,8 +1,10 @@
 import { IconButton, makeStyles, Typography, Fab } from '@material-ui/core';
 import { Mic, Chat, Close } from '@material-ui/icons';
 import clsx from 'clsx';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { AppContext } from '../../AppContext';
 import MessageContainer from '../MessageContainer/MessageContainer';
+import QueryBox from '../QueryBox/QueryBox';
 import FloatButton from './FloatButton';
 
 const useStyles = makeStyles((theme) => ({
@@ -67,6 +69,8 @@ const useStyles = makeStyles((theme) => ({
 const TestComp = () => {
     const classes = useStyles();
 
+    const { pushChat, username, botName, botAlias } = useContext(AppContext)
+
     const [isBoxOpen, setIsBoxOpen] = useState(true);
 
     const handleBoxOpen = () => {
@@ -86,10 +90,11 @@ const TestComp = () => {
                         <Typography varaint="h4">SleekBuys</Typography>  
                     </header>
                     <MessageContainer/>
-                    <form className={classes.formtest}>
+                    {/* <form className={classes.formtest}>
                     <input type="text"  className= {classes.testinput}/>
                     <IconButton variant="" className = {classes.testbutton}><Mic/></IconButton>
-                    </form>
+                    </form> */}
+                     <QueryBox pushChat={pushChat} username={username} botName={botName} botAlias={botAlias}/> 
                 </div>
             <Fab color="secondary" className={classes.outline} aria-label="send"> {!isBoxOpen ? <Close onClick={handleBoxOpen}/> : <Chat onClick={handleBoxClose}/>} </Fab>   
             
