@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
       //     display: 'none',
       // },
       position: 'relative',
+      borderRadius: '24px',
     },
     button: {
         position: 'relative',
@@ -62,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
     },
     input: {
         width: '100%',
-        //borderRadius: 24,
+        borderRadius: 24,
         backgroundColor: 'white',
         border: '1px solid transparent',
         fontSize: 20,

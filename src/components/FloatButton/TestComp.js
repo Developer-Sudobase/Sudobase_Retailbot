@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         width: '60%',
         height: 'calc(100vh - 200px)',
-        backgroundColor: 'rgb(0 0 0 / 20%)',
+        backgroundColor: '#fff',
         bottom: 45,
         right: 0,
         display: 'flex',
