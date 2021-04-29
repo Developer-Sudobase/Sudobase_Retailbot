@@ -64,6 +64,9 @@ const useStyles = makeStyles((theme) => ({
         '&:focus': {
             outline: 'none !important'
         }
+    },
+    open: {
+        lineHeight: '20px'
     }
 }))
 const TestComp = () => {
@@ -94,9 +97,11 @@ const TestComp = () => {
                     <input type="text"  className= {classes.testinput}/>
                     <IconButton variant="" className = {classes.testbutton}><Mic/></IconButton>
                     </form> */}
-                     <QueryBox pushChat={pushChat} username={username} botName={botName} botAlias={botAlias}/> 
+                    <div className={classes.que}>
+                     <QueryBox pushChat={pushChat} username={username} botName={botName} botAlias={botAlias}/>
+                     </div> 
                 </div>
-            <Fab color="secondary" className={classes.outline} aria-label="send"> {!isBoxOpen ? <Close onClick={handleBoxOpen}/> : <Chat onClick={handleBoxClose}/>} </Fab>   
+            <Fab color="secondary" className={classes.outline} aria-label="send"> {!isBoxOpen ? <Close onClick={handleBoxOpen} className={classes.close}/> : <Chat onClick={handleBoxClose} className={classes.open}/>} </Fab>   
             
         </div>
     )

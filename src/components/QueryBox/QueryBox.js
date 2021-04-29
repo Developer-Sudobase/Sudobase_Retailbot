@@ -10,18 +10,20 @@ const useStyles = makeStyles((theme) => ({
     form: {
         position: "relative",
         width: `100%`,
+        height: '40px',
         display: 'flex',
         justifyContent: 'center'
     },
     querybox: {
-      //marginLeft: 'auto',
-         width: `100%`,
+      margin: 'auto',
+         //width: `100%`,
          backgroundColor: '#fff',
         //  paddingLeft: '40px',
         //only remove this if require
-        // [theme.breakpoints.down('xs')]: {
-        //     display: 'none',
-        // },
+        [theme.breakpoints.down('xs')]: {
+            //display: 'none',
+            //width: '60%',
+        },
       //   [theme.breakpoints.down('md')]: {
       //     display: 'none',
       // },
@@ -29,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     },
     button: {
         position: 'relative',
-        right: 56,
+        //right: 56,
         '&:focus': {
           outline: 'none !important'
         },
@@ -42,6 +44,9 @@ const useStyles = makeStyles((theme) => ({
         '&:focus': {
           outline: 'none !important'
         },
+        // '&:hover': {
+        //   color: theme.palette.secondary.main,
+        // }
     },
     michold: {
       //position: 'relative',
@@ -52,6 +57,9 @@ const useStyles = makeStyles((theme) => ({
         outline: 'none !important'
       },
     },
+    sendicon: {
+      fontSize: '24px',
+    },
     input: {
         width: '100%',
         //borderRadius: 24,
@@ -61,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
         //boxShadow: '0 2px 5px 1px rgb(64 60 67 / 16%)',
         padding: '6px 0px 6px 14px',
         '&:focus': {
-          borderColor: '#80bdff',
+          //borderColor: '#80bdff',
           outline: 'none !important'
         },
     }
@@ -292,13 +300,13 @@ const QueryBox = ({pushChat, username, botName, botAlias, sessionAttributes}) =>
     }
 
     const stopConversationButton = isStopConversationButtonVisible ? (
-        <IconButton className={classes.michold} onClick={stopConversationClickHandler}><Mic fontSize="large"/></IconButton> 
+        <IconButton className={classes.michold} onClick={stopConversationClickHandler}><Mic/></IconButton> 
     ) : null;
   
     const isSpeakButtonDisabled = voiceState === "passive" ? false : true;
   
     const speakButton = isSpeakButtonVisible ? (     
-        <IconButton className={classes.mic} onClick={speakButtonClickHandler} disabled={isSpeakButtonDisabled} ><MicNone fontSize="large"/></IconButton>
+        <IconButton className={classes.mic} onClick={speakButtonClickHandler} disabled={isSpeakButtonDisabled} ><MicNone/></IconButton>
     ) : null;
 
     return (
@@ -310,7 +318,7 @@ const QueryBox = ({pushChat, username, botName, botAlias, sessionAttributes}) =>
                 <input type="text" value={message} ref={textInputRef} className= {classes.input} onChange={(e) => {
             setMessage(e.target.value);
           }}/>
-                {/* <IconButton className={classes.button} type="submit"><SendIcon/></IconButton> */}
+                <IconButton className={classes.button} type="submit"><SendIcon className={classes.sendicon}/></IconButton>
                 {/* <IconButton className={classes.mic} ><MicNone fontSize="large"/></IconButton> */}
                 {speakButton}
                 {stopConversationButton}

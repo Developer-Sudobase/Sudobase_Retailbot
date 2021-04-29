@@ -46,8 +46,27 @@ const useStyles = makeStyles((theme) => ({
     logoimg: {
         width: '15%',
         paddingTop: '5px',
+        [theme.breakpoints.down('sm')]: {
+            display:'none', 
+        },
         [theme.breakpoints.down('xs')]: {
-            width: '30%',
+            display:'none', 
+        },
+    },
+    logoimgsmall: {
+        width: '15%',
+        paddingTop: '5px',
+        [theme.breakpoints.down('lg')]: {
+            display: 'none',
+        },
+        [theme.breakpoints.down('md')]: {
+            display: 'none',
+        },
+        [theme.breakpoints.down('sm')]: {
+            display: 'flex',
+        },
+        [theme.breakpoints.down('xs')]: {
+            display: 'flex',
         },
     },
     menu:{
@@ -136,7 +155,11 @@ const Header = () => {
                         src={process.env.PUBLIC_URL + '/images/sleekbuys_logo.png'}
                         alt="SleekBuys"
                     />
-                    {/* <QueryBox pushChat={pushChat} username={username} botName={botName} botAlias={botAlias}/> */}
+                    <img className={classes.logoimgsmall}
+                        src={process.env.PUBLIC_URL + '/images/logo_small.png'}
+                        alt="SleekBuys"
+                    />
+                    <QueryBox pushChat={pushChat} username={username} botName={botName} botAlias={botAlias}/>
                     <SignOutButton signOutHandler={() => {signOutHandler(); localStorage.removeItem("transcript");}}/>
                     <IconButton
                         color="inherit"
